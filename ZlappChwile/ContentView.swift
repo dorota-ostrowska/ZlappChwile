@@ -62,7 +62,6 @@ struct ContentView: View {
                 .padding(.horizontal, 40)
             }
         }
-
         .sheet(isPresented: $showCamera) {
             CameraView { image in
                 let framed = applyFrame(to: image)
@@ -72,6 +71,7 @@ struct ContentView: View {
             }
         }
     }
+
     @MainActor
     func printImage() {
         guard let image = framedImage else { return }
@@ -147,6 +147,7 @@ func applyFrame(to image: UIImage) -> UIImage {
     }
 }
 
+
 @MainActor
 func showPrintSuccessAlert() {
     let alert = UIAlertController(
@@ -164,4 +165,3 @@ func showPrintSuccessAlert() {
         .rootViewController?
         .present(alert, animated: true)
 }
-
