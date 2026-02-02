@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A0E091552F30FD4E0021E57F /* Złapp Chwilę.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Złapp Chwilę.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E091552F30FD4E0021E57F /* ZlappChwile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZlappChwile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A0E091572F30FD4E0021E57F /* Złapp Chwilę */ = {
+		A0E091572F30FD4E0021E57F /* ZlappChwile */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Złapp Chwilę";
+			path = ZlappChwile;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		A0E0914C2F30FD4E0021E57F = {
 			isa = PBXGroup;
 			children = (
-				A0E091572F30FD4E0021E57F /* Złapp Chwilę */,
+				A0E091572F30FD4E0021E57F /* ZlappChwile */,
 				A0E091562F30FD4E0021E57F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		A0E091562F30FD4E0021E57F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0E091552F30FD4E0021E57F /* Złapp Chwilę.app */,
+				A0E091552F30FD4E0021E57F /* ZlappChwile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0E091542F30FD4E0021E57F /* Złapp Chwilę */ = {
+		A0E091542F30FD4E0021E57F /* ZlappChwile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0E091652F30FD500021E57F /* Build configuration list for PBXNativeTarget "Złapp Chwilę" */;
+			buildConfigurationList = A0E091652F30FD500021E57F /* Build configuration list for PBXNativeTarget "ZlappChwile" */;
 			buildPhases = (
 				A0E091512F30FD4E0021E57F /* Sources */,
 				A0E091522F30FD4E0021E57F /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A0E091572F30FD4E0021E57F /* Złapp Chwilę */,
+				A0E091572F30FD4E0021E57F /* ZlappChwile */,
 			);
-			name = "Złapp Chwilę";
+			name = ZlappChwile;
 			packageProductDependencies = (
 			);
-			productName = "Złapp Chwilę";
-			productReference = A0E091552F30FD4E0021E57F /* Złapp Chwilę.app */;
+			productName = ZlappChwile;
+			productReference = A0E091552F30FD4E0021E57F /* ZlappChwile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A0E091502F30FD4E0021E57F /* Build configuration list for PBXProject "Złapp Chwilę" */;
+			buildConfigurationList = A0E091502F30FD4E0021E57F /* Build configuration list for PBXProject "ZlappChwile" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0E091542F30FD4E0021E57F /* Złapp Chwilę */,
+				A0E091542F30FD4E0021E57F /* ZlappChwile */,
 			);
 		};
 /* End PBXProject section */
@@ -246,10 +246,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8FVJ26WCK;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -260,23 +263,24 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wesele.Z-app-Chwile-";
+				PRODUCT_BUNDLE_IDENTIFIER = wesele.ZlappChwile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Debug;
@@ -288,10 +292,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C8FVJ26WCK;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -302,23 +309,24 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "wesele.Z-app-Chwile-";
+				PRODUCT_BUNDLE_IDENTIFIER = wesele.ZlappChwile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 26.2;
 			};
 			name = Release;
@@ -326,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0E091502F30FD4E0021E57F /* Build configuration list for PBXProject "Złapp Chwilę" */ = {
+		A0E091502F30FD4E0021E57F /* Build configuration list for PBXProject "ZlappChwile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0E091632F30FD500021E57F /* Debug */,
@@ -335,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0E091652F30FD500021E57F /* Build configuration list for PBXNativeTarget "Złapp Chwilę" */ = {
+		A0E091652F30FD500021E57F /* Build configuration list for PBXNativeTarget "ZlappChwile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0E091662F30FD500021E57F /* Debug */,
