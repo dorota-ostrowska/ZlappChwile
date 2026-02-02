@@ -1,4 +1,4 @@
-# 📸 ZłappChwilę (PL Catch the Moment) — The Budget Wedding Photobooth
+# 📸 ZłappChwilę (means Catch the Moment) — The Budget Wedding Photobooth
 
 Welcome to **ZłappChwilę** — a lovingly handcrafted, slightly chaotic, but very effective  
 **DIY wedding photobooth app** 💍✨
