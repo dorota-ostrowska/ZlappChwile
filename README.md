@@ -1,7 +1,6 @@
 # 📸 ZłappChwilę (means Catch the Moment) — The Budget Wedding Photobooth
 
-Welcome to **ZłappChwilę** — a lovingly handcrafted, slightly chaotic, but very effective  
-**DIY wedding photobooth app** 💍✨
+Welcome to **ZłappChwilę** — a lovingly handcrafted, slightly chaotic, but very effective **DIY wedding photobooth app** 💍✨
 
 No fancy hardware.  
 No rented photobooth for thousands.  
@@ -14,6 +13,7 @@ Just an iPhone (17), a printer (Canon Selphy CP1500) and guests having fun.
 This app was created for our wedding as a **“budget photobooth”** alternative.
 
 The idea is simple:
+
 - Guests take a photo 📸
 - The photo gets a wedding frame 🖼️
 - It prints instantly 🖨️
