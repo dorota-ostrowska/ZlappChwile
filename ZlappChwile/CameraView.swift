@@ -17,10 +17,9 @@ struct CameraView: UIViewControllerRepresentable {
         let picker = UIImagePickerController()
         picker.sourceType = .camera
         picker.cameraCaptureMode = .photo
-        picker.cameraDevice = .rear
+        picker.cameraDevice = .front
         picker.delegate = context.coordinator
         picker.allowsEditing = false
-        picker.cameraViewTransform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         return picker
     }
 
@@ -37,16 +36,46 @@ struct CameraView: UIViewControllerRepresentable {
             self.parent = parent
         }
 
-        func imagePickerController(_ picker: UIImagePickerController,
-                                   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        func imagePickerController(
+            _ picker: UIImagePickerController,
+            didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
+        ) {
             if let image = info[.originalImage] as? UIImage {
-                parent.onImagePicked(image)
+
+                let finalImage: UIImage
+
+                if picker.cameraDevice == .front {
+                    // 👀 przednia kamera → lustrzane (jak preview)
+                    finalImage = mirrorImage(image)
+                } else {
+                    // 📷 tylna kamera → normalne
+                    finalImage = image
+                }
+
+                parent.onImagePicked(finalImage)
             }
+
             parent.presentationMode.wrappedValue.dismiss()
         }
+
 
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
+
+func mirrorImage(_ image: UIImage) -> UIImage {
+    UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
+    let context = UIGraphicsGetCurrentContext()!
+
+    context.translateBy(x: image.size.width, y: 0)
+    context.scaleBy(x: -1, y: 1)
+
+    image.draw(in: CGRect(origin: .zero, size: image.size))
+    let mirrored = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+
+    return mirrored ?? image
+}
+

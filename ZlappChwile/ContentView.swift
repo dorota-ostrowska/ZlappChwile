@@ -8,69 +8,82 @@ struct ContentView: View {
     @State private var framedImage: UIImage?
 
     var body: some View {
-        VStack(spacing: 40) {
+        ZStack {
+            // 🌾 TŁO CAŁEGO EKRANU
+            Color.wildflowerCream
+                .ignoresSafeArea()
 
-            // 🟢 EKRAN STARTOWY
-            if framedImage == nil {
+            VStack(spacing: 40) {
 
-                Text("Złapp Chwilę 📸")
-                    .font(.largeTitle)
-                    .bold()
+                // 🟢 EKRAN STARTOWY
+                if framedImage == nil {
+                    Image("startPhotoOfUs")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 220, height: 220)
+                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .shadow(color: .black.opacity(0.15), radius: 10)
 
-                Button("Zrób zdjęcie") {
-                    showCamera = true
-                }
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.green)
-                .cornerRadius(16)
-                .padding(.horizontal, 40)
-            }
+                    Text("Złapp Chwilę 📸")
+                        .font(.weddingTitle)
+                        .foregroundColor(.earthBrown)
 
-            // 📸 EKRAN PO ZDJĘCIU
-            if let image = framedImage {
-
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 400)
-
-                HStack(spacing: 20) {
-
-                    Button("Powtórz") {
-                        framedImage = nil
-                        capturedImage = nil
+                    Button("Zrób zdjęcie") {
                         showCamera = true
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.gray.opacity(0.3))
-                    .cornerRadius(12)
-
-                    Button("Drukuj") {
-                        printImage()
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.green)
+                    .font(.weddingTitle)
                     .foregroundColor(.white)
-                    .cornerRadius(12)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.meadowGreen)
+                    .cornerRadius(16)
+                    .padding(.horizontal, 40)
                 }
-                .padding(.horizontal, 40)
+
+                // 📸 EKRAN PO ZDJĘCIU
+                if let image = framedImage {
+
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 400)
+                        .cornerRadius(20)
+                        .shadow(radius: 10)
+
+                    HStack(spacing: 20) {
+
+                        Button("Powtórz") {
+                            framedImage = nil
+                            capturedImage = nil
+                            showCamera = true
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.sageGreen.opacity(0.3))
+                        .cornerRadius(12)
+
+                        Button("Drukuj") {
+                            printImage()
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.meadowGreen)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                    }
+                    .padding(.horizontal, 40)
+                }
             }
         }
         .sheet(isPresented: $showCamera) {
             CameraView { image in
                 let framed = applyFrame(to: image)
-
                 framedImage = framed
-                saveToGallery(image: framed)
+                saveToGallery(image: image)
             }
         }
     }
+
 
     @MainActor
     func printImage() {
